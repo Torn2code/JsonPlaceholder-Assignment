@@ -1,7 +1,7 @@
 let tbody = document.getElementById("tbody");
 
 // fetch function
-fetch("http://localhost:3000/user?")
+fetch(" http://localhost:3000/user")
   .then((res) => res.json())
   .then((json) => {
     const userData = json;
