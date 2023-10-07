@@ -1,5 +1,64 @@
 let tbody = document.getElementById("tbody");
 
+let userData = []; // Define userData in the outer scop
+
+// Add a function to open the edit modal
+function openEditModal(id) {
+  const editModal = document.getElementById("editModal");
+  const editNameInput = document.getElementById("editName");
+  const editBtn = document.getElementById("editBtn");
+
+   // Find the user data by id
+   const user = userData.find(data => data.id === id);
+
+   // Populate the input field with the current name
+   editNameInput.value = user.name;
+ 
+   // Show the modal
+   editModal.style.display = "block";
+ 
+   // Update the user's name when the save button is clicked
+   editBtn.addEventListener("click", () => {
+     const newName = editNameInput.value;
+ 
+     // Update the user's name in the userData array
+     user.name = newName;
+ 
+     // Close the modal
+     editModal.style.display = "none";
+ 
+     // Re-render the table with the updated data
+     filterAndDisplayData();
+   });
+
+   
+
+    // Close the modal when the 'x' button is clicked
+  const closeBtn = document.querySelector(".close");
+  closeBtn.addEventListener("click", () => {
+    editModal.style.display = "none";
+  });
+
+  // Close the modal when clicking outside the modal
+  window.addEventListener("click", (event) => {
+    if (event.target === editModal) {
+      editModal.style.display = "none";
+    }
+  });
+}
+
+// Add a function to delete an employee
+function deleteEmployee(id) {
+  // Find the user index by id
+  const userIndex = userData.findIndex(data => data.id === id);
+
+  // Remove the user from the userData array
+  userData.splice(userIndex, 1);
+
+  // Re-render the table with the updated data
+  filterAndDisplayData();
+}
+
 // fetch function
 fetch(" http://localhost:3000/user")
   .then((res) => res.json())
