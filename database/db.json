@@ -1,0 +1,40 @@
+{
+
+"user" : [
+
+  {
+     "id": 1,
+     "name": "Jamal Adebiyi",
+     "email": "jamaladebiyi101@gmail.com",
+     "profile": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=1600&q=60",
+     "status": "Active",
+     "role" : "Admin"
+   },
+   { 
+    "id": 2,
+    "name": "Simon Okpara",
+    "email": "simonOkpara231@gmail.com",
+    "profile": "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    "status": "Active",
+    "role" : "Owner"
+  },
+  {
+    "id": 3,
+    "name": "Jubril Abayomi",
+    "email": "jubrilabayomi112@gmail.com",
+    "profile": "https://images.unsplash.com/photo-1639747280929-e84ef392c69a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+    "status": "Active",
+    "role" : "Member"
+  }, 
+  {
+    "id": 4,
+    "name": "Ola Sumbo Jade",
+    "email": "jamaladebiyi101@oulook.com",
+    "profile": "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+    "status": "Active",
+    "role" : "Member"
+  }
+
+]
+
+}
