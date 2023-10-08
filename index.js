@@ -1,8 +1,8 @@
 let tbody = document.getElementById("tbody");
 
-let userData = []; // Define userData in the outer scop
+let userData = []; 
 
-// Add a function to open the edit modal
+// Open the edit modal
 function openEditModal(id) {
   const editModal = document.getElementById("editModal");
   const editNameInput = document.getElementById("editName");
@@ -59,14 +59,14 @@ function deleteEmployee(id) {
   filterAndDisplayData();
 }
 
-// fetch function
+// fetch 
 fetch(" http://localhost:3000/user")
   .then((res) => res.json())
   .then((json) => {
     const userData = json;
-    let selectedTab = "All"; // show all data first
+    let selectedTab = "All"; // show all data employee
 
-    // Function to filter and display data based on the selected tab
+    // Filter and display employee based on the selected tab
     function filterAndDisplayData() {
       tbody.innerHTML = ""; // clear current table
 
@@ -81,7 +81,7 @@ fetch(" http://localhost:3000/user")
           // Show active employees
           return data.status === "Active";
         } else {
-          // Show data based on other tabs
+          // Show employee based on other tabs
           return data.role === selectedTab;
         }
       });
@@ -105,12 +105,12 @@ fetch(" http://localhost:3000/user")
         // Add the "active" class to the selected tab
         tab.classList.add("active");
 
-        // Filter and display data based on the selected tab
+        // Filter and display employee based on the selected tab
         filterAndDisplayData();
       });
     });
 
-    // Initial data display (all data)
+    // Display all employee (all data)
     filterAndDisplayData();
   });
 
